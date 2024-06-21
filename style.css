@@ -91,7 +91,7 @@ body {
 .sectionPrimary .homecontent {
   max-width: 600px;
   padding: 20px;
-  order: 1; /* Order the content above the image */
+  order: 1;
 }
 
 .sectionPrimary .homeImg {
@@ -99,7 +99,7 @@ body {
   max-width: 100%;
   height: auto;
   animation: naikTurun 5s infinite;
-  order: 2; /* Order the image below the content */
+  order: 2;
 }
 
 .homecontent h1 {
@@ -148,7 +148,7 @@ body {
   font-size: 34px;
   font-weight: 600;
   min-width: 280px;
-  order: 0; /* Order the animation above the content */
+  order: 0;
 }
 
 .textanimation span {
@@ -241,15 +241,15 @@ body {
   }
 
   .buttonLoginPage {
-    padding: 8px 16px !important; /* Adjust button padding for smaller screens */
+    padding: 8px 16px !important;
   }
 
   .sectionPrimary .homecontent {
-    order: 2; /* Content below the image on small screens */
+    order: 2;
   }
 
   .sectionPrimary .homeImg {
-    order: 1; /* Image above the content on small screens */
+    order: 1;
   }
   .logoThumbnail {
     width: 70vw;
@@ -267,12 +267,16 @@ body {
   .buttonLoginPage {
     padding: 10px 20px;
   }
-  .sectionPrimary .homecontent {
-    order: 2; /* Content below the image on small screens */
-  }
 
-  .sectionPrimary .homeImg {
-    order: 1; /* Image above the content on small screens */
+  .sectionLanding {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
   }
 }
 

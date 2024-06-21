@@ -94,6 +94,21 @@ body {
   order: 1;
 }
 
+.sectionPrimary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("src/assets/img/mask.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .sectionPrimary .homeImg {
   margin-top: 30px;
   max-width: 100%;
@@ -294,6 +309,9 @@ body {
     text-align: left !important;
     overflow: hidden;
     position: relative;
+  }
+  .logoThumbnail {
+    width: 38vw !important;
   }
 }
 

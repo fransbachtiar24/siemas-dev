@@ -11,6 +11,7 @@
   background-color: transparent;
   border-radius: 10px;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -194,6 +195,7 @@ body {
 }
 
 @keyframes words {
+
   0%,
   20% {
     content: "SIEMAS";
@@ -203,6 +205,7 @@ body {
   40% {
     content: "KABUPATEN";
   }
+
   22%,
   60% {
     content: "BANYUASIN";
@@ -210,6 +213,7 @@ body {
 }
 
 @keyframes typing {
+
   10%,
   15%,
   30%,
@@ -250,12 +254,12 @@ body {
 .sectionSecondary {
   background: white;
   color: #0f172a;
-  display: flex; /* Menambahkan display flex untuk tetap mempertahankan flex row */
-  flex-direction: column; /* Mengubah flex direction menjadi column untuk penyesuaian */
-  justify-content: center; /* Pusatkan konten vertikal */
-  align-items: center; /* Pusatkan konten horizontal */
-  text-align: center; /* Pusatkan teks dalam h1 */
-  height: 100vh; /* Sesuaikan tinggi sesuai kebutuhan */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   margin-top: 14px;
@@ -263,37 +267,30 @@ body {
 
 .smartRow {
   display: flex;
-  justify-content: space-between;
-}
-
-.cardTest {
-  background-image: url("src/assets/img/testa.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  flex-direction: row;
+  gap: 16px;
   width: 100%;
-  height: 500px;
-  justify-content: center;
-  align-content: center;
-  border-radius: 8px;
+  max-width: 1200px;
 }
 
 .rowContentSmart {
-  flex: 1 1 45%; /* Mengatur lebar masing-masing kolom */
-  padding: 25px;
+  padding: 20px;
 }
 
-.rowContentSmart p {
+.rowContentSmart,
+.imageLandingTwo {
+  width: 100%;
+}
+
+.rowContentSmart,
+.keteranganSmart {
+  align-self: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
   text-align: justify;
-  font-size: 1.2rem;
 }
 
-.rowContentSmart .smartCityTwoLanding {
-  max-width: 100%;
-}
-
-.smartCityTwoLanding {
-  width: 35vw;
-}
 /* ======= */
 
 /* section 3 */
@@ -310,6 +307,7 @@ body {
   position: relative;
   margin-top: 14px;
 }
+
 /* === */
 
 .footer {
@@ -323,7 +321,7 @@ body {
   padding: 20px;
 }
 
-.footer > * {
+.footer>* {
   flex: 1 1 25%;
   margin: 10px;
 }
@@ -344,7 +342,8 @@ body {
 
 .footer .supportedBy img,
 .footer .appStoreLinks img {
-  width: 150px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  width: 150px;
+  /* Sesuaikan ukuran gambar sesuai kebutuhan */
   margin: 10px 0;
 }
 
@@ -357,22 +356,27 @@ body {
 .footer .lastFooter h5 {
   margin: 0;
 }
+
 @keyframes naikTurun {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
+
   100% {
     transform: translateY(0);
   }
 }
+
 /* Responsive design */
 @media only screen and (max-width: 599px) {
   .headerLanding {
     padding: 15px;
   }
+
   .logoLandingPage {
     width: 150px !important;
   }
@@ -388,27 +392,46 @@ body {
   .sectionPrimary .homeImg {
     order: 1;
   }
+
   .logoThumbnail {
     width: 60vw;
   }
+
   .smartRow {
-    width: 100%;
+    display: flex;
     flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 100px !important;
   }
 
   .rowContentSmart {
-    flex: 1 1 100%;
-    margin-bottom: -50px;
+    padding: 20px;
   }
-  .cardTest {
-    display: none;
+
+  .rowContentSmart,
+  .imageLandingTwo {
+    width: 100%;
+    margin-bottom: -12px;
   }
+
+  .rowContentSmart,
+  .keteranganSmart {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: justify;
+  }
+
 }
+
 
 @media only screen and (min-width: 600px) {
   .headerLanding {
     padding: 14px 30px;
   }
+
   .logoLandingPage {
     width: 120px;
   }
@@ -416,12 +439,15 @@ body {
   .homecontent {
     margin-top: 20px;
   }
+
   .homecontent {
     margin-bottom: -50px;
   }
+
   .buttonLoginPage {
     padding: 10px 20px;
   }
+
   .homecontent h1 {
     font-size: 2rem;
   }
@@ -429,12 +455,35 @@ body {
   .sectionLanding {
     height: 50vh;
   }
+
   .sectionSecondary {
     height: 50vh;
     margin-bottom: 50px;
   }
+
   .logoThumbnail {
     width: 30vw !important;
+  }
+
+  .smartRow,
+  .smartCityHeading {
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  .rowContentSmart,
+  .imageLandingTwo {
+    width: 100%;
+    margin-bottom: -12px;
+  }
+
+  .rowContentSmart,
+  .keteranganSmart {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+    text-align: justify;
   }
 }
 
@@ -446,18 +495,24 @@ body {
   .sectionLanding {
     height: 100vh;
   }
+
   .sectionSecondary {
     height: 100vh;
   }
+
   .logoThumbnail {
     width: 38vw !important;
   }
+
+
+
 }
 
 @media only screen and (min-width: 1200px) {
   .headerLanding {
     padding: 20px 30px;
   }
+
   .logoLandingPage {
     width: 250px !important;
   }
@@ -476,19 +531,23 @@ body {
   .sectionPrimary .homecontent {
     max-width: 600px;
     padding: 20px;
-    order: 1; /* Content on the left */
+    order: 1;
+    /* Content on the left */
   }
 
   .sectionPrimary .homeImg {
     margin-top: 0;
-    max-width: 45vw; /* Adjust image width */
-    order: 2; /* Image on the right */
+    max-width: 45vw;
+    /* Adjust image width */
+    order: 2;
+    /* Image on the right */
   }
 
   .textanimation {
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
-    order: 0; /* Animation above the content */
+    order: 0;
+    /* Animation above the content */
   }
 }
